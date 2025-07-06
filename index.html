@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone - Electronics Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">WahabTechZone</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to WahabTechZone</h1>
+                <p>Your one-stop destination for the latest electronics</p>
+
+                <!-- ✅ my Picture Added -->
+                <img src="image/wpic2.jpeg" alt="Wahab" class="hero-img">
+
+                <button class="cta-button" onclick="window.location.href='products.html'">
+                    Shop Now
+                </button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">📱</div>
+                        <h3>Smartphones</h3>
+                        <p>Latest smartphones from top brands</p>
+                        <button class="category-btn" onclick="filterProducts('smartphones')">
+                            View Smartphones
+                        </button>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">💻</div>
+                        <h3>Laptops</h3>
+                        <p>High-performance laptops for work and gaming</p>
+                        <button class="category-btn" onclick="filterProducts('laptops')">
+                            View Laptops
+                        </button>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎧</div>
+                        <h3>Audio</h3>
+                        <p>Premium headphones and speakers</p>
+                        <button class="category-btn" onclick="filterProducts('audio')">
+                            View Audio
+                        </button>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📺</div>
+                        <h3>TVs</h3>
+                        <p>Smart TVs with stunning picture quality</p>
+                        <button class="category-btn" onclick="filterProducts('tvs')">
+                            View TVs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid" id="featured-products">
+                    <!-- Featured products will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WahabTechZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

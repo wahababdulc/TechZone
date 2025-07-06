@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TechZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">WahabTechZone</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link home-btn">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="cart.html" class="nav-link active">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                
+                <div class="cart-content">
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be displayed here -->
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Total Items:</span>
+                            <span id="total-items">0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Total Price:</span>
+                            <span id="total-price">$0.00</span>
+                        </div>
+                        <button class="checkout-btn" onclick="checkout()">
+                            Proceed to Checkout
+                        </button>
+                        <button class="clear-cart-btn" onclick="clearCart()">
+                            Clear Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

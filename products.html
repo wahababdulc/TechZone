@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">WahabTechZone</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link home-btn">Home</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h1>Our Products</h1>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="showAllProducts()">All</button>
+                    <button class="filter-btn" onclick="filterProductsPage('smartphones')">Smartphones</button>
+                    <button class="filter-btn" onclick="filterProductsPage('laptops')">Laptops</button>
+                    <button class="filter-btn" onclick="filterProductsPage('audio')">Audio</button>
+                    <button class="filter-btn" onclick="filterProductsPage('tvs')">TVs</button>
+                </div>
+
+                <div class="product-grid" id="all-products">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WahabTechZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
