@@ -9,12 +9,12 @@ const products = [
         description: "Latest iPhone with advanced features"
     },
     {
-        id: 2,
-        name: "Samsung Galaxy S24",
-        price: 899,
-        category: "smartphones",
-        image: "📱",
-        description: "Powerful Android smartphone"
+         id: 2,
+    name: "Samsung Galaxy S24",
+    price: 899,
+    category: "smartphones",
+    image: "image/wpic2.jpeg",  // ✅ UPDATED LINE
+    description: "Powerful Android smartphone"
     },
     {
         id: 3,
@@ -111,6 +111,7 @@ function loadAllProducts() {
 }
 
 // Create product card HTML
+/*
 function createProductCard(product) {
     return `
         <div class="product-card" data-category="${product.category}">
@@ -125,7 +126,31 @@ function createProductCard(product) {
             </div>
         </div>
     `;
+}*/
+
+function createProductCard(product) {
+    const isEmoji = !product.image.includes('.'); // if there's no dot (.), it's probably an emoji
+
+    const imageHTML = isEmoji
+        ? `<div class="product-image" style="font-size: 3rem;">${product.image}</div>`
+        : `<div class="product-image"><img src="${product.image}" alt="${product.name}" /></div>`;
+
+    return `
+        <div class="product-card" data-category="${product.category}">
+            ${imageHTML}
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <div class="product-price">$${product.price}</div>
+                <button class="add-to-cart" onclick="addToCart(${product.id})">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    `;
 }
+
+
 
 // Filter products by category (from home page)
 function filterProducts(category) {
